@@ -10,10 +10,11 @@ public class Main {
         Shop[] ashan = new Shop[N];
         for (int i = 0; i < N; i++){
             ashan[i] = new Shop();
-            ashan[i].enter();
+            ashan[i].init("A", "B","C", "10:00-20:00");
             ashan[i].print();
             ashan[i].cloak();
         }
+        Shop.CountOfShops();
         Warehouse home = new Warehouse();
         String[] x = {"ABS", "BSD", "DSE"};
         home.init(x, 7);

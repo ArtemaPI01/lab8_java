@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Shop {
+    static private  int counter;
     private String name;
     private String type;
     private String street;
@@ -10,6 +11,18 @@ public class Shop {
         this.type = type;
         this.street = street;
         this.time = time;
+    }
+    static {
+        counter = 0;
+    }
+    Shop(){
+        counter++;
+    }
+    public static int Getcounter(){
+        return counter;
+    }
+    public static void CountOfShops(){
+        System.out.println("Kol-vo shops: " + counter);
     }
     public void enter(){
         Scanner sc = new Scanner(System.in);
